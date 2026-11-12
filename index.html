@@ -14264,7 +14264,7 @@ stWin = function (spared) { const B = ST.B; if (B && B.p2 && B.parts && B.pi < B
 
 /* ===================== САМООНОВЛЕННЯ БЕЗ ВТРАТИ ПРОГРЕСУ ===================== */
 /* Гра сама перевіряє, чи на GitHub є новіша версія. Якщо є — чистить лише кеш застосунку (не збереження!) і перезапускається. */
-const APP_STAMP = '1794523158';
+const APP_STAMP = '1794523277';
 /* перевіряємо саме сайт гри (а не GitHub напряму) — тоді нова версія вже точно викладена */
 const UPD_URL = location.origin + location.pathname.replace(/[^/]*$/, '') + 'index.html';
 let _updBusy = false;
@@ -14752,7 +14752,7 @@ UI.render = function (id, a) {
   if (id === 'lobby') { const scr = document.getElementById('s-lobby'); if (scr && !scr.querySelector('#secBtn')) { const b = document.createElement('button'); b.id = 'secBtn'; b.setAttribute('aria-label', '?'); b.addEventListener('pointerdown', (e) => { e.preventDefault(); e.stopPropagation(); setTimeout(secStart, 120); }, true); scr.appendChild(b); } }
   return r;
 };
-(function () { const st = document.createElement('style'); st.textContent = '#secBtn{position:absolute;left:46%;top:58%;width:16px;height:16px;border-radius:50%;background:#b0101e;border:2px solid #5a0010;opacity:.45;z-index:2;padding:0;box-shadow:0 0 6px rgba(255,0,30,.5)}#secBtn:active{opacity:1}' +
+(function () { const st = document.createElement('style'); st.textContent = '#secBtn{position:absolute;left:23%;top:44%;width:18px;height:18px;border-radius:50%;background:#c0101e;border:2px solid #5a0010;opacity:.6;z-index:30;padding:0;box-shadow:0 0 6px rgba(255,0,30,.5)}#secBtn:active{opacity:1}' +
   '#secScene{position:absolute;inset:0;z-index:120;background:#000}#secScene canvas{position:absolute;inset:0;width:100%;height:100%}#secScene.shake{animation:secsh .3s 4}@keyframes secsh{0%,100%{transform:translate(0,0)}25%{transform:translate(-8px,4px)}75%{transform:translate(8px,-4px)}}' +
   '.sec-box{position:absolute;left:50%;bottom:calc(var(--sb,0px) + 16px);transform:translateX(-50%);width:min(760px,92%);background:rgba(0,0,0,.85);border:3px solid #fff;border-radius:6px;padding:12px 18px;color:#fff;font:700 18px/1.35 var(--font-body)}.sec-box b{color:#ff4867}.sec-box p{margin:6px 0}.sec-box small{opacity:.6}' +
   '#secEnd{position:absolute;inset:0;z-index:130;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;opacity:0;transition:opacity 1.5s}#secEnd.on{opacity:1}#secEnd .o3{font:900 64px var(--font-display);color:#ff2a3c;letter-spacing:4px}#secEnd small{font:800 20px var(--font-body);opacity:.7;margin-top:8px}'; document.head.appendChild(st); })();
