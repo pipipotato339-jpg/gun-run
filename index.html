@@ -14264,8 +14264,9 @@ stWin = function (spared) { const B = ST.B; if (B && B.p2 && B.parts && B.pi < B
 
 /* ===================== САМООНОВЛЕННЯ БЕЗ ВТРАТИ ПРОГРЕСУ ===================== */
 /* Гра сама перевіряє, чи на GitHub є новіша версія. Якщо є — чистить лише кеш застосунку (не збереження!) і перезапускається. */
-const APP_STAMP = '1794522794';
-const UPD_URL = 'https://raw.githubusercontent.com/pipipotato339-jpg/gun-run/main/index.html';
+const APP_STAMP = '1794522990';
+/* перевіряємо саме сайт гри (а не GitHub напряму) — тоді нова версія вже точно викладена */
+const UPD_URL = location.origin + location.pathname.replace(/[^/]*$/, '') + 'index.html';
 let _updBusy = false;
 async function appUpdateCheck(manual) {
   if (_updBusy || !/^https?:$/.test(location.protocol)) return; _updBusy = true;
