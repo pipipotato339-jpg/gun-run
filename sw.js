@@ -1,5 +1,5 @@
 /* GUN RUN: офлайн-кеш застосунку */
-const VERSION = 'zaruba-75d9e2b68c';
+const VERSION = 'zaruba-063a85c0a4';
 const FONTS = 'zaruba-fonts';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './icon-maskable-512.png', './apple-touch-icon.png', './favicon-64.png', './firebase-config.js'];
 
